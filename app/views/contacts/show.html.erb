@@ -1,0 +1,15 @@
+<h5> All Contacts </h5>
+
+<p>Name: <%= @contact.name %> </p>
+<p><%= @contact.address %> </p>
+<%= @contact.phone1 %>
+<%= @contact.phone2 %>
+<%= @contact.email1 %>
+<%= @contact.email2 %>
+
+<% if @contact.status %>
+<p>FAV</p>
+<% end %>
+
+<%= link_to "Delete Contact", contact_path(@contact.id), method: "delete" %>
+<%= link_to "Favourite", contact_path(@contact.id), method: "patch" %>

@@ -1,0 +1,24 @@
+<h5> Create a contact </h5>
+
+<%= form_for(@contact) do |f| %>
+
+    <%= f.label :name %>
+    <%=f.text_field :name %>
+
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+
+    <%= f.label :phone1 %>
+    <%= f.telephone_field :phone1 %>
+
+    <%= f.label :phone2 %>
+    <%= f.telephone_field :phone2 %>
+
+    <%= f.label :email1 %>
+    <%= f.email_field :email1 %>
+
+    <%= f.label :email2 %>
+    <%= f.email_field :email2 %>
+
+    <%= f.submit "Submit" %>
+<% end %>

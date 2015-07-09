@@ -1,0 +1,7 @@
+<h5> All Contacts </h5>
+
+<% @contacts.each do |contact| %>
+  <p>Name: <%= link_to contact.name, contact_path(contact.id) %></p>
+  <p>Address: <%= contact.address %> </p>
+  <p>Phone1: <%= contact.phone1 %> </p>
+<% end %>
